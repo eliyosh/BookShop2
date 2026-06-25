@@ -1,9 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { cartService } from '../cart';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  styleUrl: './navbar.css'
 })
-export class Navbar {}
+export class Navbar {
+  cartService = inject(cartService);
+
+  onSearch(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    this.cartService.searchQuery.set(inputElement.value);
+  }
+
+  scrollToFooter() {
+    const footerElement = document.getElementById('app-footer');
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}
