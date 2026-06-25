@@ -1,1 +1,38 @@
-<p>category works!</p>
+<div class="store-catalog-wrapper">
+    <h2 class="catalog-main-header">ALL BOOKS LIBRARY CATALOG</h2>
+    
+    <div class="filter-group" style="margin-top: 3rem;">
+      <h3 class="section-divider">Physical Hardbounds</h3>
+      <div class="shelf-grid">
+        @for (book of cartService.filteredInventory(); track book.id) {
+          @if (book.type === 'Physical') {
+            <div class="shelf-card-box">
+              <img [src]="book.cover" alt="Cover" class="kiosk-cover-img" (click)="cartService.openDetails(book)" style="cursor: pointer;">
+              <h4>{{ book.title }}</h4>
+              <p class="catalog-author">By {{ book.author }}</p>
+              <p class="catalog-price">₱{{ book.price }}</p>
+              <button class="kiosk-box-btn" (click)="cartService.openDetails(book)">VIEW OPTIONS</button>
+            </div>
+          }
+        }
+      </div>
+    </div>
+  
+    <div class="filter-group" style="margin-top: 5rem;">
+      <h3 class="section-divider">Digital E-Books</h3>
+      <div class="shelf-grid">
+        @for (book of cartService.filteredInventory(); track book.id) {
+          @if (book.type === 'E-Book') {
+            <div class="shelf-card-box">
+              <img [src]="book.cover" alt="Cover" class="kiosk-cover-img" (click)="cartService.openDetails(book)" style="cursor: pointer;">
+              <h4>{{ book.title }}</h4>
+              <p class="catalog-author">By {{ book.author }}</p>
+              <p class="catalog-price">₱{{ book.price }}</p>
+              <button class="kiosk-box-btn" (click)="cartService.openDetails(book)">VIEW OPTIONS</button>
+            </div>
+          }
+        }
+      </div>
+    </div>
+  </div>
+  
