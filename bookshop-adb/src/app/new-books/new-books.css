@@ -1,0 +1,81 @@
+.order-layout-grid { 
+    display: flex; 
+    gap: 3rem; 
+    grid-template-columns: 2fr 1fr;
+    margin-top: 2rem; 
+    flex-wrap: wrap; }
+
+.items-column { 
+    flex: 2; 
+    background: var(--bg-accent-blue); 
+    padding: 2rem; 
+    border-radius: 4px; 
+    min-width: 300px; 
+    border: 1px solid var(--primary-gold); }
+
+.form-column { 
+    flex: 1; 
+    background: var(--bg-accent-blue); 
+    padding: 2rem; 
+    border-radius: 4px; 
+    border: 1px solid var(--primary-gold); 
+    min-width: 280px; }
+
+.item-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid #3a4b73; 
+    padding: 1rem 0; }
+
+.item-details { 
+    display: flex; 
+    gap: 1rem; 
+    align-items: center; }
+
+.cart-row-img { 
+    width: 45px; 
+    height: 65px; 
+    object-fit: cover; 
+    border: 1px solid var(--primary-gold); 
+    cursor: pointer; }
+
+.format-tag { 
+    color: var(--primary-gold); 
+    font-weight: bold; 
+    font-size: 0.8rem; }
+
+.quantity-controls { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; }
+
+.qty-btn { 
+    background: var(--primary-gold); 
+    border: none; 
+    padding: 0.2rem 0.6rem; 
+    font-weight: bold; cursor: pointer; 
+    color: var(--bg-dark-blue); }
+
+.qty-val { 
+    font-size: 1.1rem; 
+    width: 25px; 
+    text-align: center; 
+    font-weight: bold; }
+
+.remove-btn { 
+    background: #d32f2f; 
+    color: white; border: none; 
+    padding: 0.3rem 0.7rem; 
+    cursor: pointer; 
+    margin-left: 1rem; font-weight: bold; }
+
+.input-group { margin-bottom: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.input-group label { font-size: 0.9rem; color: var(--primary-gold); font-weight: bold; }
+.input-group input { padding: 0.6rem; background: var(--bg-dark-blue); border: 1px solid var(--primary-gold); color: white; font-family: inherit; }
+.billing-summary { background: var(--bg-dark-blue); padding: 1rem; margin: 1.5rem 0; border-radius: 4px; border: 1px dashed #3a4b73; }
+.bill-line { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem; }
+.total { font-weight: bold; color: red; font-size: 1.2rem; }
+.confirm-btn { width: 100%; background: var(--primary-gold); color: var(--bg-dark-blue); border: none; padding: 1rem; font-weight: bold; font-size: 1.1rem; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+.confirm-btn:disabled { background: #555; color: #888; cursor: not-allowed; border: 1px solid #444; }
+.empty-text { text-align: center; font-style: italic; color: var(--text-light); margin-top: 2rem; }
