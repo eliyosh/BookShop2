@@ -1,1 +1,17 @@
-<p>navbar works!</p>
+<header class="main-header">
+    <div class="brand-bar">
+      <span class="brand-title">ELLAVATED PAGE</span>
+      <div class="search-box">
+        <input type="text" placeholder="SEARCH INVENTORY..." (input)="onSearch($event)">
+        <button class="search-btn">SEARCH</button>
+      </div>
+    </div>
+    
+    <nav class="nav-bar-links">
+      <a routerLink="/home" routerLinkActive="active">HOME</a>
+      <a (click)="scrollToFooter()" class="scroll-link">ABOUT</a>
+      <a routerLink="/pages" routerLinkActive="active">PAGES</a>
+      <a routerLink="/order" routerLinkActive="active">ORDER</a>
+    </nav>
+  </header>
+  
