@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Navbar } from './navbar/navbar';
+import { CartService } from './cart';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: '../styles.css'
 })
 export class App {
-  protected readonly title = signal('bookshop-adb');
+  cartService = inject(CartService);
 }
