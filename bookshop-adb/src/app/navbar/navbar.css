@@ -1,0 +1,68 @@
+.main-header {
+    background-color: var(--bg-dark-blue);
+    padding: 1.5rem 0rem;
+    border-bottom: 2px solid var(--primary-gold);
+  }
+  .brand-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+  }
+  .brand-title {
+   font-family: 'Material Symbols Rounded', sans-serif;
+    font-size: 3.2rem;
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    color: var(--text-white);
+    letter-spacing: 20px; 
+    font-weight: semi-bold;
+    margin: 2rem 0 0 2rem;
+  
+  }
+  .search-box {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .search-box input {
+    background: var(--bg-accent-blue);
+    border: 1px solid var(--primary-gold);
+    color: var(--text-white);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .search-btn {
+    background: var(--bg-accent-blue);
+    color: var(--text-white);
+    border: 1px solid var(--primary-gold);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+  .nav-bar-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-bar-links a {
+    background-color: var(--primary-gold);
+    color: var(--bg-dark-blue);
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: var(--text-white) !important;
+    color: var(--bg-dark-blue) !important;
+    font-family: 'Matangi';
+  }
+  
+  .scroll-link:hover {
+    background-color: black;
+  }
+  
