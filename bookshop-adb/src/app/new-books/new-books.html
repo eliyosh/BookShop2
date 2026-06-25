@@ -1,1 +1,59 @@
 <p>new-books works!</p>
+<div class="order-layout-grid">
+  
+    <div class="items-column">
+      <h3>Selected Literature Items</h3>
+      
+      @for (item of cartService.cart(); track (item.id + item.format)) {
+        <div class="item-row">
+          <div class="item-details">
+            <img [src]="item.cover" alt="Cover" class="cart-row-img" (click)="cartService.openDetails(item)">
+            <div>
+              <h4>{{ item.title }} <small class="format-tag">({{ item.format }})</small></h4>
+              <p>Unit Price: ₱{{ item.price }}</p>
+            </div>
+          </div>
+          
+          <div class="quantity-controls">
+            <button class="qty-btn" (click)="cartService.updateQuantity(item.id, item.format, -1)">-</button>
+            <span class="qty-val">{{ item.quantity }}</span>
+            <button class="qty-btn" (click)="cartService.updateQuantity(item.id, item.format, 1)">+</button>
+            <button class="remove-btn" (click)="cartService.removeFromCart(item.id, item.format)">Remove</button>
+          </div>
+        </div>
+      } @empty {
+        <p class="empty-text">Your selection cart bag workspace is currently empty.</p>
+      }
+    </div>
+  
+    <!-- billing-->
+    <div class="form-column">
+      <h3>Kiosk Billing</h3>
+      
+      <div class="input-group">
+        <label>Customer Full Name:</label>
+        <input type="text" placeholder="Enter full name..." (input)="updateField('name', $event)">
+      </div>
+      <div class="input-group">
+        <label>Contact Phone Number:</label>
+        <input type="text" placeholder="Enter contact number..." (input)="updateField('phone', $event)">
+      </div>
+      <div class="input-group">
+        <label>Shipping / Delivery Address:</label>
+        <input type="text" placeholder="Enter complete address..." (input)="updateField('address', $event)">
+      </div>
+  
+      <div class="billing-summary">
+        <h4>Order Summary Matrix</h4>
+        <div class="bill-line"><span>Items Subtotal:</span> <span>₱{{ cartService.totalPrice() }}</span></div>
+        <div class="bill-line"><span>Tax / Handling Fees:</span> <span>₱0</span></div>
+        <hr style="border-color: var(--primary-gold); margin: 0.75rem 0;">
+        <div class="bill-line total"><span>Total Gross Due:</span> <span>₱{{ cartService.totalPrice() }}</span></div>
+      </div>
+  
+      <button class="confirm-btn" [disabled]="cartService.cart().length === 0" (click)="processReceipt()">
+        CONFIRM PURCHASE ORDER
+      </button>
+    </div>
+  </div>
+  
