@@ -9,8 +9,8 @@ app.use(cors());
 
 //establish db connection
 mongoose.connect(process.env.MONGODB_URI)
-.then(() => console.log("DB connected successfully"))
-.cath(err => console.error ("DB connection error"));
+.then(() => console.log('Successfully connected to Ellavated Bookshop DB Cluster'))
+.catch(err => console.error('Database connection error:', err)); // Fixed: .cath to .catch
 
 //data schema and model
 const Book =mongoose.model('Book', new mongoose.Schema({
