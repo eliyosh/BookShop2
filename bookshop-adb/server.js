@@ -10,7 +10,7 @@ app.use(cors());
 //establish db connection
 mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log('Successfully connected to Ellavated Bookshop DB Cluster'))
-.catch(err => console.error('Database connection error:', err)); // Fixed: .cath to .catch
+.catch(err => console.error('Database connection error:', err)); 
 
 //data schema and model
 const Book =mongoose.model('Book', new mongoose.Schema({
@@ -25,7 +25,7 @@ const Book =mongoose.model('Book', new mongoose.Schema({
     ageGroup: String,
     yearPublished: Number,
     description:String,
-}));
+}), 'books');
 
 //data schema and model for billing
 const Order = mongoose.model('Order', new mongoose.Schema({
@@ -40,7 +40,7 @@ const Order = mongoose.model('Order', new mongoose.Schema({
     }],
     totalAmount:{type: Number, required: true},
     orderDate: {type:Date, deafult: Date.now}
-}));
+}), 'orders');
 
 
 //API handlers
