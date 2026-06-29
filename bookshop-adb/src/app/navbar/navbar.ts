@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { cartService } from '../cart';
+import { CartService } from '../cart';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +10,7 @@ import { cartService } from '../cart';
   styleUrl: './navbar.css'
 })
 export class Navbar {
-  cartService = inject(cartService);
+  cartService = inject(CartService);
 
   onSearch(event: Event) {
     const inputElement = event.target as HTMLInputElement;
