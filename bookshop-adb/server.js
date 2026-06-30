@@ -33,13 +33,13 @@ const Order = mongoose.model('Order', new mongoose.Schema({
     phone: {type: String, required:true},
     address: {type: String, required: true},
     items:[{
-        bookdId: Number,
+        bookId: Number,
         title: String,
         quantity:Number,
         price:Number
     }],
     totalAmount:{type: Number, required: true},
-    orderDate: {type:Date, deafult: Date.now}
+    orderDate: {type:Date, default: Date.now}
 }), 'orders');
 
 
@@ -68,7 +68,7 @@ app.get('/api/books', async (req, res) => {
   //post process billing checkout reeipt orders
   app.post('/api/orders', async (req, res) => {
     try {
-      console.log("Incoming cart data received: ", re.body);
+      console.log("Incoming cart data received: ", req.body);
 
       const newOrder = new Order({
         customerName: req.body.name,
