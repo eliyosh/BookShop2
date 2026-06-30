@@ -68,6 +68,8 @@ app.get('/api/books', async (req, res) => {
   //post process billing checkout reeipt orders
   app.post('/api/orders', async (req, res) => {
     try {
+      console.log("Incoming cart data received: ", re.body);
+
       const newOrder = new Order({
         customerName: req.body.name,
         phone: req.body.phone,
@@ -77,8 +79,10 @@ app.get('/api/books', async (req, res) => {
       });
       
       await newOrder.save();
+      console.log("Success, Order saved to DB");
       res.status(201).json({ message: 'Purchase logged safely.', orderId: newOrder._id });
     } catch (error) {
+      console.error("DB save failed", error);
       res.status(400).json({ error: 'Failed to log database billing matrix payload.' });
     }
   });
