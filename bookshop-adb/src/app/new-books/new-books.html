@@ -1,8 +1,9 @@
-<p>new-books works!</p>
+
 <div class="order-layout-grid">
   
     <div class="items-column">
-      <h3>Selected Literature Items</h3>
+      
+      <h3 style="letter-spacing: 2px;">  SELECTED LITERATURE ITEMS</h3>
       
       @for (item of cartService.cart(); track (item.id + item.format)) {
         <div class="item-row">
@@ -22,33 +23,33 @@
           </div>
         </div>
       } @empty {
-        <p class="empty-text">Your selection cart bag workspace is currently empty.</p>
+        <p class="empty-text">Your selection cart bag is currently empty.</p>
       }
     </div>
   
     <!-- billing-->
     <div class="form-column">
-      <h3>Kiosk Billing</h3>
+      <h3 style="letter-spacing: 2px;">BILLING</h3>
       
       <div class="input-group">
         <label>Customer Full Name:</label>
-        <input type="text" placeholder="Enter full name..." (input)="updateField('name', $event)">
+        <input type="text" style="font-style:italic;" placeholder="e.g Juan Delacruz"  (input)="updateField('name', $event)">
       </div>
       <div class="input-group">
         <label>Contact Phone Number:</label>
-        <input type="text" placeholder="Enter contact number..." (input)="updateField('phone', $event)">
+        <input type="text" style="font-style:italic;" placeholder="e.g 09876543212..." (input)="updateField('phone', $event)">
       </div>
       <div class="input-group">
         <label>Shipping / Delivery Address:</label>
-        <input type="text" placeholder="Enter complete address..." (input)="updateField('address', $event)">
+        <input type="text" style="font-style:italic;" placeholder="e.g Baguio City, Benguet..." (input)="updateField('address', $event)">
       </div>
   
       <div class="billing-summary">
-        <h4>Order Summary Matrix</h4>
+        <h4>Order Summary</h4>
         <div class="bill-line"><span>Items Subtotal:</span> <span>₱{{ cartService.totalPrice() }}</span></div>
-        <div class="bill-line"><span>Tax / Handling Fees:</span> <span>₱0</span></div>
+        <div class="bill-line"><span>Tax / Handling Fees:</span> <span>₱5</span></div>
         <hr style="border-color: var(--primary-gold); margin: 0.75rem 0;">
-        <div class="bill-line total"><span>Total Gross Due:</span> <span>₱{{ cartService.totalPrice() }}</span></div>
+        <div class="bill-line total"><span>Total:</span> <span>₱{{ cartService.totalPrice() }}</span></div>
       </div>
   
       <button class="confirm-btn" (click)="processReceipt()">

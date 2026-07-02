@@ -40,7 +40,7 @@ const Order = mongoose.model('Order', new mongoose.Schema({
     }],
     totalAmount:{type: Number, required: true},
     orderDate: {type:Date, default: Date.now}
-}), 'order');
+}), 'orders');
 
 
 //API handlers

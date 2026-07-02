@@ -76,13 +76,13 @@
                 (change)="cartService.selectedFormat.set($any($event.target).value)"
                 style="background: var(--bg-dark-blue); color: white; border: 1px solid var(--primary-gold); padding: 0.4rem; font-family: inherit;">
                 <option value="Hardbound">📚 Hardbound (Physical Copy)</option>
-                <option value="E-Book">💻 E-Book (Read Online - Saves ₱300)</option>
+                <option value="E-Book">💻 E-Book (Read Online - Saves ₱500)</option>
               </select>
             </div>
 
             <p class="price-highlight">
               <strong>Price Amount:</strong> 
-              ₱{{ cartService.selectedFormat() === 'E-Book' ? cartService.selectedBook()?.price - 300 : cartService.selectedBook()?.price }}
+              ₱{{ cartService.selectedFormat() === 'E-Book' ? cartService.selectedBook()?.price - 500 : cartService.selectedBook()?.price }}
             </p>
           </div>
 
@@ -91,7 +91,7 @@
           <p class="desc-text"><strong>Synopsis:</strong><br>{{ cartService.selectedBook()?.description }}</p>
           
           <button class="kiosk-box-btn" (click)="cartService.addToCart(cartService.selectedBook(), cartService.selectedFormat()); cartService.closeDetails()">
-            🛒 ADD TO BAG AS {{ cartService.selectedFormat() }}
+            🛒 ADD TO CART AS {{ cartService.selectedFormat() }}
           </button>
         </div>
       </div>

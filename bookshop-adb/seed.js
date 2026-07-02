@@ -39,7 +39,7 @@ async function seedDB() {
   try {
     await Book.deleteMany({}); // prevents duplication
     await Book.insertMany(booksData);
-    console.log('🎉 Successfully seeded all 18 books into MongoDB Atlas!');
+    console.log('Successfully seeded all 18 books into MongoDB Atlas!');
   } catch (error) {
     console.error('Failed to populate tables:', error);
   } finally {

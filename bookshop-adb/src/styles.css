@@ -122,15 +122,15 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
-    background-color: white;
+    background-color: rgb(228, 200, 149);
     color: var(--bg-dark-blue);
     border: 2px solid var(--primary-gold);
     border-radius: 0px !important; 
     padding: 0.6rem 1.2rem;
-    font-family: 'Georgia', serif;
+    font-family: 'Matangi';
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -213,12 +213,12 @@
   }
   
   .modal-details-side { flex: 2; }
-  .modal-details-side h2 { font-family: 'Matangi'; margin: 0; font-size: 1.8rem; color: var(--text-white); }
-  .author-sub { font-family: 'Matangi'; color: var(--primary-gold); font-style: italic; margin: 0.3rem 0 1rem 0; font-size: 1.05rem; }
+  .modal-details-side h2 {letter-spacing: 0.3px; font-family: 'Matangi'; margin: 0; font-size: 1.8rem; color: var(--text-white); }
+  .author-sub {letter-spacing: 0.5px; font-family: 'Matangi'; color: var(--primary-gold); font-style: italic; margin: 0.3rem 0 1rem 0; font-size: 1.05rem; }
   .divider-line { border: 0; border-top: 1px solid #3a4b73; margin: 1rem 0; }
-  .metadata-grid-block p { margin: 0.5rem 0; font-size: 0.95rem; }
-  .price-highlight { color:rgb(202, 15, 15); font-size: 1.15rem; }
-  .desc-text { font-family: 'Matangi'; font-size: 0.95rem; line-height: 1.6; color: var(--text-light); }
+  .metadata-grid-block p {letter-spacing: 1.2px; font-family:'Matangi'; margin: 0.5rem 0; font-size: 0.95rem; }
+  .price-highlight { color:rgb(247, 102, 102); font-size: 1.15rem; }
+  .desc-text {letter-spacing: 1px; font-style: italic; font-family:'Matangi'; font-size: 0.95rem; line-height: 1.6; color: var(--text-light); }
   
   /* footnote footer grid styles panels */
   .main-footer {

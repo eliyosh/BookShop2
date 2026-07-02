@@ -6,6 +6,7 @@
     flex-wrap: wrap; }
 
 .items-column { 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
     flex: 2; 
     background: var(--bg-accent-blue); 
     padding: 2rem; 
@@ -14,6 +15,7 @@
     border: 1px solid var(--primary-gold); }
 
 .form-column { 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
     flex: 1; 
     background: var(--bg-accent-blue); 
     padding: 2rem; 
@@ -41,6 +43,7 @@
     cursor: pointer; }
 
 .format-tag { 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
     color: var(--primary-gold); 
     font-weight: bold; 
     font-size: 0.8rem; }
@@ -70,12 +73,55 @@
     cursor: pointer; 
     margin-left: 1rem; font-weight: bold; }
 
-.input-group { margin-bottom: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; }
-.input-group label { font-size: 0.9rem; color: var(--primary-gold); font-weight: bold; }
-.input-group input { padding: 0.6rem; background: var(--bg-dark-blue); border: 1px solid var(--primary-gold); color: white; font-family: inherit; }
-.billing-summary { background: var(--bg-dark-blue); padding: 1rem; margin: 1.5rem 0; border-radius: 4px; border: 1px dashed #3a4b73; }
-.bill-line { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem; }
-.total { font-weight: bold; color: red; font-size: 1.2rem; }
-.confirm-btn { width: 100%; background: var(--primary-gold); color: var(--bg-dark-blue); border: none; padding: 1rem; font-weight: bold; font-size: 1.1rem; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
-.confirm-btn:disabled { background: #555; color: #888; cursor: not-allowed; border: 1px solid #444; }
-.empty-text { text-align: center; font-style: italic; color: var(--text-light); margin-top: 2rem; }
+.input-group { 
+    margin-bottom: 1.2rem; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.4rem; }
+
+.input-group label { 
+    font-size: 0.9rem; 
+    color: var(--primary-gold); 
+    font-weight: bold; }
+
+.input-group input { 
+    padding: 0.6rem; 
+    background: var(--bg-dark-blue); 
+    border: 1px solid var(--primary-gold); 
+    color: white; font-family: inherit; }
+
+.billing-summary { 
+    background: var(--bg-dark-blue); 
+    padding: 1rem; 
+    margin: 1.5rem 0; 
+    border-radius: 4px; 
+    border: 1px dashed #3a4b73; }
+
+.bill-line { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 0.5rem; 
+    font-size: 0.95rem; }
+
+.total { 
+    font-weight: bold; 
+    color: rgb(199, 69, 69); 
+    font-size: 1.2rem; }
+
+.confirm-btn { 
+    width: 100%; 
+    background: rgb(52, 90, 52); 
+    color:rgb(189, 228, 189); 
+    border: none; padding: 1rem; 
+    font-weight: bold; 
+    font-size: 1.1rem; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; }
+
+.empty-text {
+    font-family: 'Courier New', Courier, monospace; 
+    text-align: center; 
+    font-style: italic; 
+    color: var(--text-light); 
+    margin-top: 2rem; }
