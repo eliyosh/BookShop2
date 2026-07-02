@@ -51,7 +51,7 @@
         <div class="bill-line total"><span>Total Gross Due:</span> <span>₱{{ cartService.totalPrice() }}</span></div>
       </div>
   
-      <button class="confirm-btn" [disabled]="cartService.cart().length === 0" (click)="processReceipt()">
+      <button class="confirm-btn" (click)="processReceipt()">
         CONFIRM PURCHASE ORDER
       </button>
     </div>
