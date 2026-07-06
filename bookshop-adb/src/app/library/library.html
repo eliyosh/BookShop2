@@ -1,28 +1,43 @@
-<div class="library-container">
-    <div class="search-box-panel">
-      <h2>SHELF</h2>
-      <p>Enter your contact phone number to retrieve your active E-Book purchases:</p>
+<div class="store-catalog-wrapper">
+  
+    <h2 class="catalog-main-header">LITERATURE SHELF</h2>
+    
+    <!-- access part -->
+    <div class="library-access-panel">
+      <h3 class="access-panel-title">SHELF ACCESS</h3>
+      <p class="access-panel-subtitle">Enter your contact phone number to retrieve your active E-Book purchases:</p>
       
-      <div class="search-row">
-        <input type="text" placeholder="e.g, 09212437824" (input)="updatePhone($event)">
-        <button class="access-btn" (click)="fetchMyLibrary()">ACCESS MY SHELF</button>
+      <div class="library-search-row">
+        <input type="text" placeholder="e.g., 09123456543" (input)="updatePhone($event)" class="library-search-input">
+        <button class="kiosk-box-btn auto-width" (click)="fetchMyLibrary()">ACCESS MY SHELF</button>
       </div>
     </div>
   
-    <div class="shelf-grid">
-      @for (book of digitalBooks(); track book.title) {
-        <div class="digital-book-card">
-          <div class="card-details">
-            <h4>{{ book.title }}</h4>
-            <p>Quantity Owned: {{ book.quantity }}</p>
+    <!-- section row-->
+    <div class="filter-group">
+      <h3 class="section-divider">Your Digital E-Book Shelf Collection</h3>
+      
+      <div class="shelf-grid">
+        @for (book of digitalBooks(); track book.title) {
+          
+          <div class="shelf-card-box">
+            <img [src]="book.cover || 'assets/default-cover.png'" alt="Cover" class="kiosk-cover-img">
+            
+            <div class="shelf-card-info">
+              <h4 class="library-book-title">{{ book.title }}</h4>
+              <p class="library-book-qty">Quantity Owned: {{ book.quantity }}</p>
+            </div>
+            
+            <button class="kiosk-box-btn" (click)="openReader(book.title)">READ ONLINE</button>
           </div>
-          <button class="read-btn" (click)="openReader(book.title)">READ ONLINE</button>
-        </div>
-      } @empty {
-        @if (hasSearched()) {
-          <p class="empty-shelf-text">No digital E-Book copies found registered to this phone number.</p>
+  
+        } @empty {
+          @if (hasSearched()) {
+            <p class="empty-text centers-span">No digital E-Book copies found registered to this phone number.</p>
+          }
         }
-      }
+      </div>
     </div>
+  
   </div>
   

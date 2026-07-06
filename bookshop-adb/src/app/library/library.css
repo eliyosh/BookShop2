@@ -1,132 +1,83 @@
-.library-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-    font-family:  'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    letter-spacing: 0.5px;
-}
-  
-  .search-box-panel {
-    background: linear-gradient(135deg, #1e1e24 0%, #2a2a35 100%);
-    color: #ffffff;
+.library-access-panel {
+    background-color: var(--bg-accent-blue);
+    border: 2px solid var(--primary-gold);
+    margin: 3rem 2rem;
     padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    margin-bottom: 3rem;
-    border-left: 5px solid #d4af37; 
+    box-sizing: border-box;
   }
   
-  .search-box-panel h2 {
-    margin-top: 0;
-    font-size: 1.8rem;
+  .access-panel-title {
+    color: var(--primary-gold);
+    margin: 0 0 0.5rem 0;
     letter-spacing: 2px;
-
+    font-size: 1.4rem;
+    text-transform: uppercase;
   }
   
-  .search-box-panel p {
-    color: #b3b3cb;
-    margin-bottom: 1.5rem;
+  .access-panel-subtitle {
+    color: var(--text-light);
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+    font-size: 0.95rem;
   }
   
-  .search-row {
+  .library-search-row {
     display: flex;
     gap: 1rem;
-    max-width: 600px;
-  }
-  
-  .search-row input {
-    flex: 1;
-    padding: 0.85rem 1.25rem;
-    border-radius: 6px;
-    border: 1px solid #444454;
-    background: #121216;
-    color: #fff;
-    font-size: 1rem;
-    font-style: italic;
-  }
-  
-  .search-row input:focus {
-    outline: none;
-    border-color: #d4af37;
-    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
-  }
-  
-  .access-btn {
-    background: #d4af37;
-    color: #121216;
-    border: none;
-    padding: 0 1.5rem;
-    font-weight: bolder;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.2s ease;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-  
-  .access-btn:hover {
-    background: #f1c40f;
-  }
-  
-  .shelf-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .digital-book-card {
-    background: #ffffff;
-    border: 1px solid #e1e1e8;
-    border-radius: 8px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .digital-book-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  }
-  
-  .card-details h4 {
-    margin: 0 0 0.5rem 0;
-    color: #1a1a24;
-    font-size: 1.2rem;
-  }
-  
-  .card-details p {
-    margin: 0;
-    color: #666675;
-    font-size: 0.9rem;
-  }
-  
-  .read-btn {
-    background: #1e1e24;
-    color: #ffffff;
-    border: none;
-    padding: 0.75rem;
-    border-radius: 6px;
+    flex-wrap: wrap;
     width: 100%;
-    margin-top: 1.5rem;
+  }
+  
+  .library-search-input {
+    flex: 1;
+    min-width: 250px;
+    background: var(--bg-dark-blue);
+    border: 1px solid var(--primary-gold);
+    color: var(--text-white);
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .library-search-input:focus {
+    outline: none;
+    border-color: var(--text-white);
+  }
+  
+  /* Button overrides layout targets */
+  .kiosk-box-btn.auto-width {
+    width: auto;
+    margin-top: 0;
+    padding: 0.6rem 2rem;
+  }
+  
+  /* Catalog sub-labels text alignments */
+  .filter-group {
+    margin-top: 3rem;
+    padding: 0 2rem;
+  }
+  
+  .shelf-card-info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .library-book-title {
+    min-height: auto !important;
+    margin: 0.5rem 0 0.25rem 0 !important;
+  }
+  
+  .library-book-qty {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--bg-dark-blue);
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
   }
   
-  .read-btn:hover {
-    background: #3a3a47;
-  }
-  
-  .empty-shelf-text {
+  .centers-span {
     grid-column: 1 / -1;
     text-align: center;
-    color: #888899;
-    padding: 3rem;
-    background: #f8f8fa;
-    border-radius: 8px;
-    border: 2px dashed #d1d1d6;
     font-style: italic;
+    padding: 3rem 0;
   }
   

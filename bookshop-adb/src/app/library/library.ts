@@ -25,13 +25,39 @@ export class LibraryComponent {
   fetchMyLibrary() {
     const phone = this.searchPhone().trim();
     if (!phone) {
-      alert('Please enter your contact or phone number to access your shelf!');
+      alert('Please enter your contact phone number to access your shelf!');
       return;
     }
 
     this.http.get<any[]>(`http://localhost:3000/api/library/${phone}`).subscribe({
       next: (data) => {
-        this.digitalBooks.set(data);
+    
+        const mappedData = data.map(book => {
+          let coverPath = 'assets/default-cover.png'; 
+
+          if (book.title === "Psychopath's Obsession") coverPath = 'assets/obsession.jpg';
+          else if (book.title === "Every Last Word") coverPath = 'assets/last.jpg';
+          else if (book.title === "The Seven Husbands of Evelyn Hugo") coverPath = 'assets/seven.png';
+          else if (book.title === "The Subtle Art of Not Giving a F*ck") coverPath = 'assets/subtle.png';
+          else if (book.title === "The Moonlight Lilac Vol. 1") coverPath = 'assets/lilac.png';
+          else if (book.title === "The Moonlight Lilac Vol. 2") coverPath = 'assets/lilac.png';
+          else if (book.title === "The Moonlight Lilac Vol. 3") coverPath = 'assets/lilac.png';
+          else if (book.title === "Kissing My Kryptonite") coverPath = 'assets/kissing.png';
+          else if (book.title === "Illicit Affair") coverPath = 'assets/illicit.jpg';
+          else if (book.title === "Endless Love") coverPath = 'assets/endless.jpg';
+          else if (book.title === "The Psychology of Money") coverPath = 'assets/money.jpg';
+          else if (book.title === "The Laws of Human Nature") coverPath = 'assets/laws.jpg';
+          else if (book.title === "It Ends with Us") coverPath = 'assets/ends.jpg';
+          else if (book.title === "A Good Girl's Guide to Murder") coverPath = 'assets/good.jpg';
+          else if (book.title === "A Gentle Reminder") coverPath = 'assets/gentle.jpg';
+          else if (book.title === "Powerless") coverPath = 'assets/powerless.jpg';
+          else if (book.title === "If He Had Been with Me") coverPath = 'assets/if.jpg';
+          else if (book.title === "The Rain in España") coverPath = 'assets/rain.jpg';
+
+          return { ...book, cover: coverPath };
+        });
+
+        this.digitalBooks.set(mappedData);
         this.hasSearched.set(true);
       },
       error: (err) => {
@@ -40,7 +66,9 @@ export class LibraryComponent {
       }
     });
   }
+
+ 
   openReader(title: string) {
-    alert(`Opening online viewer engine for: "${title}"...\nEnjoy reading your literature copy!`);
+    alert(`Opening online viewer engine for:\n"${title}"\n\nEnjoy reading your digital literature copy!`);
   }
 }

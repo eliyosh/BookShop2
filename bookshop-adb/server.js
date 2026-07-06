@@ -37,7 +37,8 @@ const Order = mongoose.model('Order', new mongoose.Schema({
         title: String,
         format: String,
         quantity:Number,
-        price:Number
+        price:Number,
+        cover:String
     }],
     totalAmount:{type: Number, required: true},
     orderDate: {type:Date, default: Date.now}
