@@ -6,7 +6,7 @@
     flex-wrap: wrap; }
 
 .items-column { 
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
     flex: 2; 
     background: var(--bg-accent-blue); 
     padding: 2rem; 
@@ -15,7 +15,7 @@
     border: 1px solid var(--primary-gold); }
 
 .form-column { 
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
     flex: 1; 
     background: var(--bg-accent-blue); 
     padding: 2rem; 

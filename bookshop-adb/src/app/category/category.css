@@ -1,8 +1,11 @@
 .catalog-main-header { 
-    letter-spacing: 2px; 
+    letter-spacing: 3px; 
     text-align: center; 
     margin-bottom: 2rem; 
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    ;
+    font-weight: bold;
+
 }
 .section-divider { 
   border-bottom: 3px solid var(--text-white); 
