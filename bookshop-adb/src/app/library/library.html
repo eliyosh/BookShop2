@@ -1,1 +1,28 @@
-<p>library works!</p>
+<div class="library-container">
+    <div class="search-box-panel">
+      <h2>SHELF</h2>
+      <p>Enter your contact phone number to retrieve your active E-Book purchases:</p>
+      
+      <div class="search-row">
+        <input type="text" placeholder="e.g., 09212437824" (input)="updatePhone($event)">
+        <button class="access-btn" (click)="fetchMyLibrary()">ACCESS MY SHELF</button>
+      </div>
+    </div>
+  
+    <div class="shelf-grid">
+      @for (book of digitalBooks(); track book.title) {
+        <div class="digital-book-card">
+          <div class="card-details">
+            <h4>{{ book.title }}</h4>
+            <p>Quantity Owned: {{ book.quantity }}</p>
+          </div>
+          <button class="read-btn" (click)="openReader(book.title)">READ ONLINE</button>
+        </div>
+      } @empty {
+        @if (hasSearched()) {
+          <p class="empty-shelf-text">No digital E-Book copies found registered to this phone number.</p>
+        }
+      }
+    </div>
+  </div>
+  
