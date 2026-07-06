@@ -35,6 +35,7 @@ const Order = mongoose.model('Order', new mongoose.Schema({
     items:[{
         bookId: Number,
         title: String,
+        format: String,
         quantity:Number,
         price:Number
     }],
@@ -80,12 +81,24 @@ app.get('/api/books', async (req, res) => {
       
       await newOrder.save();
       console.log("Success, Order saved to DB");
-      res.status(201).json({ message: 'Purchase logged safely.', orderId: newOrder._id });
+  
+      //to update books collection
+      if (req.body.items && Array.isArray(req.body.items)) {
+        for (const item of req.body.items) {
+          const isEBook = item.format === 'E-Book';
+          await Book.findOneAndUpdate(
+            { title: item.title },
+            { $inc: { salesCount: item.quantity, readCount: isEBook ? item.quantity : 0 } }
+          );
+        }
+        console.log("Inventory Updated!");
+      }
+      res.send({ message: 'Purchase logged safely.', orderId: newOrder._id });
     } catch (error) {
       console.error("DB save failed", error);
-      res.status(400).json({ error: 'Failed to log database billing matrix payload.' });
+      res.status(400).send({ error: 'Failed to log database billing payload.' });
     }
-  });
+ });
 
   // delete: remove book entries 
   app.delete('/api/books/:id', async (req, res) => {
