@@ -1,0 +1,128 @@
+.library-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    font-family: sans-serif;
+  }
+  
+  .search-box-panel {
+    background: linear-gradient(135deg, #1e1e24 0%, #2a2a35 100%);
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    margin-bottom: 3rem;
+    border-left: 5px solid #d4af37; /* Royal gold highlight trim match */
+  }
+  
+  .search-box-panel h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .search-box-panel p {
+    color: #b3b3cb;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-row {
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+  }
+  
+  .search-row input {
+    flex: 1;
+    padding: 0.85rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid #444454;
+    background: #121216;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .search-row input:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+  }
+  
+  .access-btn {
+    background: #d4af37;
+    color: #121216;
+    border: none;
+    padding: 0 1.5rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .access-btn:hover {
+    background: #f1c40f;
+  }
+  
+  .shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .digital-book-card {
+    background: #ffffff;
+    border: 1px solid #e1e1e8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .digital-book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .card-details h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1a1a24;
+    font-size: 1.2rem;
+  }
+  
+  .card-details p {
+    margin: 0;
+    color: #666675;
+    font-size: 0.9rem;
+  }
+  
+  .read-btn {
+    background: #1e1e24;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .read-btn:hover {
+    background: #3a3a47;
+  }
+  
+  .empty-shelf-text {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #888899;
+    padding: 3rem;
+    background: #f8f8fa;
+    border-radius: 8px;
+    border: 2px dashed #d1d1d6;
+    font-style: italic;
+  }
+  
