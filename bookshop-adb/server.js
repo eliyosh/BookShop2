@@ -47,13 +47,32 @@ const Order = mongoose.model('Order', new mongoose.Schema({
 //API handlers
 //get fetch
 app.get('/api/books', async (req, res) => {
-    try {
-      const books = await Book.find();
-      res.json(books);
-    } catch (error) {
-      res.status(500).json({ error: 'Failed to fetch database inventory streams.' });
-    }
-  });
+  try {
+    const books = await Book.find();
+    res.json(books);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch database inventory streams.' });
+  }
+});
+
+app.get('/api/library/:phone', async (req, res) => {
+  try {
+    const orders = await Order.find({phone: req.params.phone});
+    
+    let ebooks = []; 
+    orders.forEach(order => {
+      order.items.forEach(item => {
+        if (item.format === 'E-Book') {
+          ebooks.push(item);
+        }
+      });
+    });
+
+    res.send(ebooks); 
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch digital library.' });
+  }
+});
 
   //post add new catalog book metadate elements
   app.post('/api/books', async (req, res) => {
