@@ -69,16 +69,17 @@
             <p><strong>Year Published:</strong> {{ cartService.selectedBook()?.yearPublished }}</p>
             
             <!--format choice -->
-            <div style="margin: 1rem 0; display: flex; align-items: center; gap: 1rem;">
-              <strong style="color: var(--primary-gold);">Select Edition Format:</strong>
-              <select 
-                [value]="cartService.selectedFormat()" 
-                (change)="cartService.selectedFormat.set($any($event.target).value)"
-                style="background: var(--bg-dark-blue); color: white; border: 1px solid var(--primary-gold); padding: 0.4rem; font-family: inherit;">
-                <option value="Hardbound">📚 Hardbound (Physical Copy)</option>
-                <option value="E-Book">💻 E-Book (Read Online - Saves ₱500)</option>
-              </select>
-            </div>
+            <div>
+  <strong>Select Edition Format:</strong>
+
+  <select
+    [value]="cartService.selectedFormat()"
+    (change)="cartService.selectedFormat.set($any($event.target).value)"
+    style="font-size: 1.05rem; padding: 8px;">
+    <option value="Hardbound">📚 Hardbound (Physical Copy)</option>
+    <option value="E-Book">💻 E-Book (Read Online - Saves ₱500)</option>
+  </select>
+</div>
 
             <p class="price-highlight">
               <strong>Price Amount:</strong> 
@@ -98,4 +99,3 @@
     </div>
   </div>
 }
-

@@ -39,7 +39,7 @@
     width: 45px; 
     height: 65px; 
     object-fit: cover; 
-    border: 1px solid var(--primary-gold); 
+    border: 1px solid var(--primary-white); 
     cursor: pointer; }
 
 .format-tag { 
@@ -82,13 +82,19 @@
 .input-group label { 
     font-size: 0.9rem; 
     color: var(--primary-gold); 
-    font-weight: bold; }
+    font-weight: bold; 
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
 
 .input-group input { 
     padding: 0.6rem; 
     background: var(--bg-dark-blue); 
     border: 1px solid var(--primary-gold); 
-    color: white; font-family: inherit; }
+    color: white; font-family: inherit; 
+    font-size: 1rem; 
+    font-family: inherit; 
+}
 
 .billing-summary { 
     background: var(--bg-dark-blue); 
@@ -117,11 +123,30 @@
     font-size: 1.1rem; 
     cursor: pointer; 
     text-transform: uppercase; 
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    transition: all 0.2s ease; }
+    
+ .confirm-btn:hover {
+  background: rgb(70, 120, 70);
+  color: white;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
 
 .empty-text {
     font-family: 'Courier New', Courier, monospace; 
     text-align: center; 
     font-style: italic; 
     color: var(--text-light); 
-    margin-top: 2rem; }
+    margin-top: 2rem; 
+    font-size: 1.2rem;}
+
+.items-heading {    
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;  
+}
+

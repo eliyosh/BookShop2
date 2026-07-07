@@ -1,22 +1,24 @@
 <!-- top featured arrivals hero showcase block row -->
 <section class="hero-section">
-    <div class="hero-text-side">
-      <h2 style="font-family:sans-serif;">JUDGE THESE SAFELY BY THEIR COVERS</h2>
-    </div>
-    <div class="hero-books-side">
-      @for (book of cartService.filteredInventory(); track book.id) {
-        @if (book.id === 1 || book.id === 2) {
-          <div class="hero-card">
-            <img [src]="book.cover" alt="Cover" class="kiosk-cover-img" (click)="cartService.openDetails(book)" style="cursor: pointer;">
-            <h4>{{ book.title }}</h4>
-            <p class="author-sub-text">By {{ book.author }}</p>
-            <button class="kiosk-box-btn" (click)="cartService.openDetails(book)">VIEW OPTIONS</button>
-          </div>
-        }
+  <div class="hero-text-side">
+    <h2 style="font-family:sans-serif;">JUDGE THESE SAFELY BY THEIR COVERS</h2>
+  </div>
+  <div class="hero-books-side">
+    @for (book of cartService.filteredInventory(); track book.id) {
+      @if (book.id === 1 || book.id === 2) {
+        <div class="hero-card">
+          <img [src]="book.cover" alt="Cover" class="kiosk-cover-img" (click)="cartService.openDetails(book)" style="cursor: pointer;">
+          <h4>{{ book.title }}</h4>
+          <p class="author-sub-text">By {{ book.author }}</p>
+          <button class="kiosk-box-btn" (click)="cartService.openDetails(book)">VIEW OPTIONS</button>
+        </div>
       }
-    </div>
-  </section>
-  
+    }
+  </div>
+</section>
+
+<div class="judge-burners-container">
+
   <!-- highly judge section header block -->
   <div class="kiosk-header-wrapper">
     <div class="kiosk-header-box">
@@ -24,8 +26,7 @@
       <div class="kiosk-header-gold-line"></div>
     </div>
   </div>
-  
-  <!-- highly judge row -->
+
   <section class="shelf-section">
     <div class="shelf-grid">
       @for (book of cartService.filteredInventory(); track book.id) {
@@ -39,7 +40,7 @@
       }
     </div>
   </section>
-  
+
   <!-- shelf burners section header block -->
   <div class="kiosk-header-wrapper" style="margin-top: 5rem;">
     <div class="kiosk-header-box">
@@ -47,8 +48,7 @@
       <div class="kiosk-header-gold-line"></div>
     </div>
   </div>
-  
-  <!-- shelf burners row -->
+
   <section class="shelf-section">
     <div class="shelf-grid">
       @for (book of cartService.filteredInventory(); track book.id) {
@@ -62,4 +62,5 @@
       }
     </div>
   </section>
-  
+
+</div>

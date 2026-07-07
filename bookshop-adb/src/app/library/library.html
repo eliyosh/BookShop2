@@ -1,7 +1,7 @@
 <div class="store-catalog-wrapper">
   
     <h2 class="catalog-main-header">LITERATURE SHELF</h2>
-    
+   
     <!-- access part -->
     <div class="library-access-panel">
       <h3 class="access-panel-title">SHELF ACCESS</h3>
@@ -12,10 +12,10 @@
         <button class="kiosk-box-btn auto-width" (click)="fetchMyLibrary()">ACCESS MY SHELF</button>
       </div>
     </div>
-  
+   <div class="catalog-sections-container">
     <!-- section row-->
     <div class="filter-group">
-      <h3 class="section-divider">Your Digital E-Book Shelf Collection</h3>
+      <h3 class="section-divider">Your E-Book Collection</h3>
       
       <div class="shelf-grid">
         @for (book of digitalBooks(); track book.title) {
@@ -38,6 +38,6 @@
         }
       </div>
     </div>
-  
+  </div>
   </div>
   

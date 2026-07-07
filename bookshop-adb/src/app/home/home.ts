@@ -6,6 +6,7 @@ import {CartService} from '../cart';
   standalone:true,
   imports: [],
   templateUrl: './home.html',
+  styleUrl: './home.css'
 })
 export class Home {
   cartService = inject (CartService);

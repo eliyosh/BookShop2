@@ -3,7 +3,7 @@
   
     <div class="items-column">
       
-      <h3 style="letter-spacing: 2px;">  SELECTED LITERATURE ITEMS</h3>
+<h3 class="items-heading">SELECTED LITERATURE ITEMS</h3>
       
       @for (item of cartService.cart(); track (item.id + item.format)) {
         <div class="item-row">
@@ -29,7 +29,7 @@
   
     <!-- billing-->
     <div class="form-column">
-      <h3 style="letter-spacing: 2px;">BILLING</h3>
+      <h3 class="items-heading">BILLING</h3>
       
       <div class="input-group">
         <label>Customer Full Name:</label>

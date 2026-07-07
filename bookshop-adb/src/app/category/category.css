@@ -2,7 +2,7 @@
     letter-spacing: 3px; 
     text-align: center; 
     margin-bottom: 2rem; 
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    ;
     font-weight: bold;
 
@@ -12,15 +12,25 @@
   padding-bottom: 0.5rem; 
   text-transform: uppercase; 
   color: var(--primary-gold); 
-  letter-spacing: 1px; 
+  letter-spacing: 2px; 
+  font-size: 1.90rem;
 }
 .catalog-author { 
     color: navy; 
-    font-size: 0.85rem; 
+    font-size: 0.95rem; 
     font-style: italic; 
     margin: 0.4rem 0; }
 
 .catalog-price { 
     font-weight: bold; 
     color: rgba(243, 0, 0, 0.823); 
-    margin: 0.5rem 0 1rem 0; }
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.30rem;
+}
+
+.catalog-sections-container {
+  background-color:rgba(255, 255, 255, 0.279);
+  padding: 3rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}

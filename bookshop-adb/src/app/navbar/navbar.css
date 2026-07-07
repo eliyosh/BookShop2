@@ -1,7 +1,7 @@
 .main-header {
     background-color: var(--bg-dark-blue);
     padding: 1.5rem 0rem;
-    border-bottom: 2px solid var(--primary-gold);
+    border-bottom: 3px solid var(--primary-gold);
   }
   .brand-bar {
     display: flex;
@@ -12,10 +12,10 @@
   }
   .brand-title {
    font-family: 'Material Symbols Rounded', sans-serif;
-    font-size: 3.2rem;
+    font-size: 5.2rem;
     font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
     color: var(--text-white);
-    letter-spacing: 20px; 
+    letter-spacing: 40px; 
     font-weight: semi-bold;
     margin: 2rem 0 0 2rem;
   
