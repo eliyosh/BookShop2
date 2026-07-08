@@ -84,8 +84,7 @@
     color: var(--primary-gold); 
     font-weight: bold; 
     font-size: 1rem;
-    letter-spacing: 1px;
-}
+    letter-spacing: 1px;}
 
 .input-group input { 
     padding: 0.6rem; 
@@ -93,8 +92,7 @@
     border: 1px solid var(--primary-gold); 
     color: white; font-family: inherit; 
     font-size: 1rem; 
-    font-family: inherit; 
-}
+    font-family: inherit; }
 
 .billing-summary { 
     background: var(--bg-dark-blue); 
@@ -130,8 +128,7 @@
   background: rgb(70, 120, 70);
   color: white;
   transform: translateY(-2px);
-  transition: all 0.2s ease;
-}
+  transition: all 0.2s ease;}
 
 .empty-text {
     font-family: 'Courier New', Courier, monospace; 
@@ -147,6 +144,5 @@
   letter-spacing: 2px;
   text-align: center;
   margin-top: 0.6rem;
-  margin-bottom: 2rem;  
-}
+  margin-bottom: 2rem;  }
 

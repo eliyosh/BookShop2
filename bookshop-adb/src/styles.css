@@ -56,7 +56,7 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      }
+    }
 
   .kiosk-header-box h3 {
     color: #000000 !important; 
@@ -213,14 +213,16 @@
   }
   
   .modal-details-side { 
-flex: 2; }
+flex: 2; 
+  }
 
   .modal-details-side h2 {
-letter-spacing: 1.3px; 
-font-family: 'Matangi'; 
-margin: 0; font-size: 1.8rem; 
-color: var(--text-white); 
-}
+  letter-spacing: 1.3px; 
+  font-family: 'Matangi'; 
+  margin: 0; font-size: 1.8rem; 
+  color: var(--text-white); 
+  }
+
   .author-sub {
 letter-spacing: 0.5px; 
 font-family: 'Matangi'; 
@@ -229,21 +231,25 @@ font-style: italic;
 margin: 0.3rem 0 1rem 0; 
 font-size: 1.05rem; 
 }
+
   .divider-line { 
 border: 0; 
 border-top: 1px solid #3a4b73; 
 margin: 1rem 0;
  }
+
   .metadata-grid-block p {
 letter-spacing: 1.2px; 
 font-family:'Matangi'; 
 margin: 0.5rem 0; 
 font-size: 0.95rem; 
 }
+
   .price-highlight { 
 color:rgb(247, 102, 102); 
 font-size: 1.15rem; 
 }
+
   .desc-text {
 letter-spacing: 1px; 
 font-style: italic; 
@@ -285,15 +291,16 @@ select option {
   color: var(--text-white);
   background-color: var(--bg-dark-blue);
   border: 1px solid var(--primary-gold);
-   border-radius: 0px;
-    cursor: pointer;
-  outline: none;}
+  border-radius: 0px;
+  cursor: pointer;
+  outline: none;
+  }
 
   .format-select-block option {
   background-color: var(--bg-accent-blue);
   color: var(--text-white);
   padding: 0.5rem;
-}
+  }
 
   
   /* footnote footer grid styles panels */
@@ -307,7 +314,8 @@ select option {
     margin-top: 5rem;
     width: 100%; 
     box-sizing: border-box;
-  }
+    }
+
   .footer-grid {
     max-width: 1200px;
     margin: 0 auto;
@@ -315,6 +323,7 @@ select option {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2.5rem;
   }
+
   .footer-col h4 {
     color: var(--primary-gold);
     letter-spacing: 2px;
@@ -324,15 +333,17 @@ select option {
     border-bottom: 1px solid #1c2a4a;
     padding-bottom: 0.5rem;
   }
+
   .footer-col ul { 
-list-style: none;
- padding: 0;
- margin: 0; }
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  }
 
   .footer-col ul li { 
-margin-bottom: 0.6rem;
- cursor: pointer; }
+  margin-bottom: 0.6rem;
+  cursor: pointer; }
 
   .footer-col ul li:hover {
- color: var(--primary-gold);
- }
+  color: var(--primary-gold);
+  }
